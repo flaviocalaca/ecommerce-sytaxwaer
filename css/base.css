@@ -4,7 +4,12 @@ body {
   background-color: #fff;
   color: #333;
   font-size: 16px;
-  
+
+}
+main{
+  padding: 2.5rem 0 ;
+  max-width: 1360px;
+  margin: 0 auto;
 }
 .btn {
   font-size: 1.25rem;
