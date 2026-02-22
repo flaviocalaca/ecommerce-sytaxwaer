@@ -12,6 +12,7 @@
   align-items: center;
   padding: 0,225rem 1.25rem;
   max-width: 1320px;
+  height: 72px;
 }
 .logo{
   height: 40px;
@@ -21,6 +22,7 @@
 }
 .logo img{
   height: 48px;
+
 }
 .nav-center a, .nav-right a{
   font-size: 1.25rem;
