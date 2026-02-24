@@ -10,13 +10,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0,225rem 1.25rem;
+  padding: 0.225rem 1.25rem;
   max-width: 1320px;
   height: 72px;
 }
-.logo{
-  height: 40px;
-}.nav-center ul{
+.nav-center ul{
   display: flex;
   gap: 2.5rem;
 }
