@@ -37,7 +37,7 @@
   "highlight highlight sneaker-purple sneaker-purple"
   "highlight highlight model sneaker-color"
   "sneaker-white sneaker-white model sneaker-silver" ;
-  gap: 30px;
+  gap: var(--space-lg);
 }
 .top1-content{
   position: absolute;
@@ -61,10 +61,11 @@
 .cta-group {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
   @media (max-width:768px){
     .grid-section{
-      grid-template-columns: 1rf 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(5, auto);
       grid-template-areas:
        "highlight highlight"
@@ -73,7 +74,7 @@
        " model sneaker-silver"
        "sneaker-purple sneaker-purple";
        width: 100%;
-       gap: 0.625rem;
+       gap: var(--space-lg);
     }
     .highlight{
       min-height: 500px;
@@ -84,5 +85,39 @@
     .sneaker-white, .sneaker-purple{
       min-height: 190px;
     }
+  }
 
+  @media (max-width: 480px){
+    .grid-section{
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+       "highlight"
+       "sneaker-white"
+       "sneaker-purple"
+       "model"
+       "sneaker-color"
+       "sneaker-silver";
+      gap: var(--space-md);
+      padding: 0 var(--space-md);
+    }
+    .highlight{
+      min-height: 300px;
+    }
+    .model, .sneaker-color, .sneaker-silver{
+      min-height: 250px;
+    }
+    .sneaker-white, .sneaker-purple{
+      min-height: 150px;
+    }
+    .card-title{
+      font-size: 1rem;
+    }
+    .card-subtitle{
+      font-size: 1.25rem;
+    }
+    .cta-group{
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
   }

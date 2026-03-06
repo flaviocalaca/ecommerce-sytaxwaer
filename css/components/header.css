@@ -4,14 +4,14 @@
   top: 60px;
   left: 50%;
   transform: translate(-50%);
-  width: 1260px;
+  width: calc(100% - 40px);
+  max-width: 1260px;
   border-radius: 15px;
   z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.225rem 1.25rem;
-  max-width: 1320px;
   height: 72px;
 }
 .nav-center ul{
@@ -70,6 +70,7 @@
 @media (max-width: 1280px){
   .header{
     width: calc(100% - 40px);
+    top: 20px;
   }
   .menu-icon{
     display: block;
@@ -109,5 +110,35 @@
   }
   .menu-toggle:checked ~ .nav-container{
     right: 0;
+  }
+}
+
+@media (max-width: 640px){
+  .header{
+    width: calc(100% - 20px);
+    padding: 0.5rem;
+  }
+  .logo img{
+    height: 40px;
+  }
+  .nav-right img{
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px){
+  .header{
+    top: 10px;
+    height: 60px;
+    padding: 0.25rem;
+  }
+  .logo img{
+    height: 36px;
+  }
+  .nav-right{
+    gap: 1rem;
+  }
+  .nav-right img{
+    height: 16px;
   }
 }

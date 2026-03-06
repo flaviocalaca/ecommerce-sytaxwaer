@@ -4,19 +4,25 @@ body {
   background-color: #fff;
   color: #333;
   font-size: 16px;
-
 }
 main{
-  padding: 2.5rem 0 ;
+  padding: 2.5rem 0;
   max-width: 1360px;
   margin: 0 auto;
 }
 
-@media (max-width:1280px){
+@media (max-width: 1280px){
   main{
-    padding: 0.625rem;
+    padding: var(--space-lg);
   }
 }
+
+@media (max-width: 640px){
+  main{
+    padding: var(--space-md);
+  }
+}
+
 .btn {
   font-size: 1.25rem;
   width: 161px;
@@ -27,13 +33,11 @@ main{
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s, border 0.3s;
-
 }
 .btn-outline{
   border: 2px solid #fff;
   background-color: transparent;
-  line-height: 23px
-
+  line-height: 23px;
 }
 .btn-filler{
   background-color: #fff;
@@ -43,4 +47,13 @@ main{
   background-color: #6329A2;
   color: #fff;
   border: 2px solid #6329A2;
+}
+
+@media (max-width: 480px){
+  .btn{
+    font-size: 1rem;
+    width: auto;
+    height: auto;
+    padding: var(--space-sm) var(--space-md);
+  }
 }

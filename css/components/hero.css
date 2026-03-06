@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 0 6rem;
+  padding: 0 var(--space-xl);
 }
 .hero-content {
   color: #fff;
@@ -20,11 +20,12 @@
 }
 .hero-buttons{
   display: flex;
-  gap: 16px;
+  gap: var(--space-md);
+  justify-content: center;
 }
 .hero-content .hero-title {
   font-size: 1.87rem;
-  margin-bottom: 40px;
+  margin-bottom: var(--space-xl);
   font-weight: 400;
   line-height: 36px;
   letter-spacing: 3px;
@@ -33,26 +34,49 @@
   font-size: 1.25rem;
   font-weight: 400;
 }
-@media (max-widht:768px){
+@media (max-width: 768px){
   .hero{
     height: 660px;
     background-image: url(../../images/banners/hero-mobile.jpg);
+    border-radius: 10px;
   }
   .hero-overlay{
-    padding: 0;
+    padding: 0 var(--space-md);
   }
   .hero-content .hero-title{
-    font-size:1.5rem;
+    font-size: 1.5rem;
   }
   .hero-content .hero-subtitle{
     font-size: 1.25rem;
   }
   .hero-content{
     max-width: 330px;
-    margin:  0 auto;
+    margin: 0 auto;
   }
   .btn{
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px){
+  .hero{
+    height: 400px;
+  }
+  .hero-content .hero-title{
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    line-height: 28px;
+  }
+  .hero-content .hero-subtitle{
+    font-size: 1rem;
+  }
+  .hero-buttons{
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .btn{
+    font-size: 1rem;
+    width: 50%;
   }
 }
 
