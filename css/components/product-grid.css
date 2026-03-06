@@ -60,8 +60,19 @@
 }
 .cta-group {
   display: flex;
-  gap: 10px;
+  gap: var(--space-md);
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-group .btn {
+  flex: 0 1 auto;
+  white-space: nowrap;
+  padding: 10px 16px;
+  font-size: 1rem;
+  height: auto;
+  width: auto;
+  min-width: 120px;
 }
   @media (max-width:768px){
     .grid-section{
@@ -116,8 +127,16 @@
     .card-subtitle{
       font-size: 1.25rem;
     }
+  
     .cta-group{
-      flex-direction: column;
+      display: flex;
+      flex-direction: row;
       gap: var(--space-sm);
+    }
+    .cta-group .btn {
+      width: 100%;
+      min-width: unset;
+      font-size: 0.95rem;
+      padding: 8px 12px;
     }
   }
