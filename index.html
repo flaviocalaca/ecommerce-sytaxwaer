@@ -29,6 +29,7 @@
           />
         </a>
       </h1>
+
       <input type="checkbox" class="menu-toggle" id="menu-toggle" />
       <label for="menu-toggle" class="menu-icon">
         <img src="./images/icons/hamburger.svg" alt="Menu mobile" />
@@ -213,5 +214,36 @@
       <hr />
       <div class="footer-copy">Copyright. All Rights Reserved</div>
     </footer>
+
+    <script>
+      // Obter elementos
+      const menuToggle = document.getElementById("menu-toggle");
+      const menuIcon = document.querySelector(".menu-icon");
+      const navContainer = document.querySelector(".nav-container");
+      const navLinks = document.querySelectorAll(".nav-container a");
+
+      // Abrir/fechar menu ao clicar no hamburger
+      menuIcon.addEventListener("click", (e) => {
+        e.stopPropagation();
+        navContainer.classList.toggle("active");
+      });
+
+      // Fechar menu ao clicar em um link
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          navContainer.classList.remove("active");
+        });
+      });
+
+      // Fechar menu ao clicar fora
+      document.addEventListener("click", (e) => {
+        const header = document.querySelector(".header");
+        const isClickInsideMenu = header.contains(e.target);
+
+        if (!isClickInsideMenu && navContainer.classList.contains("active")) {
+          navContainer.classList.remove("active");
+        }
+      });
+    </script>
   </body>
 </html>

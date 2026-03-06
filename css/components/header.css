@@ -72,44 +72,93 @@
     width: calc(100% - 40px);
     top: 20px;
   }
+
+  .menu-toggle{
+    display: none;
+  }
+
   .menu-icon{
     display: block;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: opacity 0.3s ease;
   }
+
+  .menu-icon img{
+    height: 100%;
+    width: 100%;
+  }
+
+  .menu-icon:hover img{
+    opacity: 0.7;
+  }
+
   .nav-container{
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 200px;
-    flex-direction: column;
+    right: -280px;
+    width: 280px;
+    height: 100vh;
     background-color: #fff;
     padding: 80px 20px 20px;
     gap: 2rem;
     transition: right 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
   }
 
-  .nav-center, .nav-right{
+  .nav-container.active{
+    right: 0;
+  }
+
+  .nav-center{
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .nav-right{
     width: 100%;
     text-align: center;
   }
-  .nav-center, .nav-right{
-    width: 100%;
-    text-align: center;
-  }
+
   .nav-center ul, .nav-right ul{
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
+
+  .nav-center li, .nav-right li{
+    margin: 0;
+  }
+
   .nav-center a, .nav-right a{
-    width: 100%;
-    padding: 0.3rem 0;
-    border-bottom: 1px solid #eee;
-    font-size: 1rem;
     display: block;
+    padding: 0.75rem 0;
+    color: #333333;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
   }
-  .menu-toggle:checked ~ .nav-container{
-    right: 0;
+
+  .nav-center a:hover, .nav-right a:hover{
+    color: #7c3aed;
+  }
+
+  .nav-right li img{
+    height: 18px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
   }
 }
 
@@ -117,12 +166,21 @@
   .header{
     width: calc(100% - 20px);
     padding: 0.5rem;
+    top: 15px;
   }
+
   .logo img{
     height: 40px;
   }
+
+  .nav-container{
+    width: 260px;
+    right: -260px;
+    padding: 70px 15px 15px;
+  }
+
   .nav-right img{
-    height: 18px;
+    height: 16px;
   }
 }
 
@@ -130,15 +188,31 @@
   .header{
     top: 10px;
     height: 60px;
-    padding: 0.25rem;
+    padding: 0.5rem;
+    width: calc(100% - 10px);
   }
+
   .logo img{
     height: 36px;
   }
-  .nav-right{
-    gap: 1rem;
+
+  .menu-icon{
+    height: 24px;
+    width: 24px;
   }
+
+  .nav-container{
+    width: 240px;
+    right: -240px;
+    padding: 60px 12px 12px;
+  }
+
+  .nav-center a, .nav-right a{
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+
   .nav-right img{
-    height: 16px;
+    height: 14px;
   }
 }
