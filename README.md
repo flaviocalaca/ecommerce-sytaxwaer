@@ -5,6 +5,11 @@
 
 Este é um projeto de e-commerce de tênis chamado SytaxWaer. O site apresenta uma interface moderna e responsiva, com foco na apresentação de produtos e categorias de forma clara e atraente.
 
+## 📸 Preview
+
+![Preview do Projeto](./images/preview.png)
+
+
 ## Funcionalidades
 
 - **Navegação Intuitiva:** Menu principal com links para categorias (Masculino, Feminino, Outlet), lojas e informações sobre a empresa.
